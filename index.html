@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempe Chips - Group 6 UMKM</title>
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        .bg-tempe { background-color: #f39c12; }
+        .text-tempe { color: #d35400; }
+        .bg-warm { background-color: #fffaf0; }
+        
+        /* Custom Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.cdn.newsbytesapp.com/ind/images/l63320250527195122.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hover-scale { transition: transform 0.3s ease; }
+        .hover-scale:hover { transform: scale(1.05); }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #fffaf0; }
+        ::-webkit-scrollbar-thumb { background: #f39c12; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-warm text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i data-lucide="cookie" class="text-tempe"></i>
+                <span class="font-bold text-xl tracking-tight text-tempe uppercase">Tempe Chips <span class="text-gray-400 text-sm font-normal">| GRP 6</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="hover:text-tempe transition">Home</a>
+                <a href="#about" class="hover:text-tempe transition">Profil</a>
+                <a href="#team" class="hover:text-tempe transition">Tim</a>
+                <a href="#product" class="hover:text-tempe transition">Produk</a>
+                <a href="#contact" class="hover:text-tempe transition">Kontak</a>
+            </div>
+            <a href="#order" class="bg-tempe text-white px-5 py-2 rounded-full font-semibold hover:bg-orange-600 transition text-sm">Pre-Order</a>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section id="home" class="hero-gradient h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-3xl">
+            <div class="inline-block px-4 py-1 bg-white/20 backdrop-blur-md rounded-full mb-6 text-sm font-medium tracking-widest uppercase">Traditional Indonesian Snack</div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Tempe Chips – Crispy Local Snack with Authentic Taste</h1>
+            <p class="text-lg md:text-xl mb-8 text-gray-200">Nikmati kelezatan kripik tempe lokal yang renyah, gurih, higienis, dan dibuat dari kedelai pilihan kualitas terbaik.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#product" class="bg-white text-tempe px-8 py-3 rounded-full font-bold hover:bg-orange-50 transition shadow-lg">Lihat Produk</a>
+                <a href="#order" class="bg-tempe text-white px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-lg">Pre-Order Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. About Us / Profile -->
+    <section id="about" class="py-24 px-4 max-w-7xl mx-auto reveal">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <span class="text-tempe font-bold tracking-widest uppercase text-sm">Business Identity</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6 text-gray-900 leading-tight">Membangun Cita Rasa Lokal</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Tempe Chips adalah inisiatif bisnis UMKM yang digerakkan oleh mahasiswa Universitas Putra Bangsa. Kami berkomitmen untuk mengangkat potensi makanan tradisional Indonesia menjadi camilan modern yang berkualitas tinggi.
+                </p>
+                <div class="bg-orange-100 p-6 rounded-2xl border-l-4 border-tempe">
+                    <h3 class="font-bold text-gray-900 mb-1">Owner / CEO Profile</h3>
+                    <p class="text-gray-700 font-semibold">Naufal Dzulian Syafiq</p>
+                    <p class="text-sm text-gray-500 italic">18 Tahun, Mahasiswa Universitas Putra Bangsa</p>
+                </div>
+            </div>
+            <div class="relative order-1 md:order-2">
+                <!-- Image: Tempe Chips close up -->
+                <img src="https://nilaigizi.com/assets/images/produk/produk_1652587434.jpg" alt="Keripik Tempe Renyah" class="rounded-3xl shadow-2xl object-cover h-[450px] w-full">
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl hidden md:block">
+                    <p class="text-tempe font-bold text-2xl">Kelompok 6</p>
+                    <p class="text-gray-500 text-sm">Universitas Putra Bangsa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Team Section -->
+    <section id="team" class="py-24 bg-orange-50 px-4">
+        <div class="max-w-7xl mx-auto text-center reveal">
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Anggota Kelompok 6</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Tim kreatif di balik pengembangan produk Tempe Chips Universitas Putra Bangsa.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Member 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover-scale border border-orange-100">
+                    <div class="w-28 h-28 bg-orange-100 rounded-full mx-auto mb-6 flex items-center justify-center border-4 border-white shadow-inner">
+                        <i data-lucide="user-round" class="text-tempe w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Naufal Dzulian S</h3>
+                    <p class="text-tempe font-medium mb-4 italic">CEO / Anggota</p>
+                    <div class="bg-gray-100 inline-block px-4 py-1 rounded-full text-xs font-bold text-gray-400 uppercase">NIM: 250421121</div>
+                </div>
+                <!-- Member 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover-scale border border-orange-100">
+                    <div class="w-28 h-28 bg-orange-100 rounded-full mx-auto mb-6 flex items-center justify-center border-4 border-white shadow-inner">
+                        <i data-lucide="user-round" class="text-tempe w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Dian Wulan Sari</h3>
+                    <p class="text-tempe font-medium mb-4 italic">Anggota</p>
+                    <div class="bg-gray-100 inline-block px-4 py-1 rounded-full text-xs font-bold text-gray-400 uppercase">NIM: 250421108</div>
+                </div>
+                <!-- Member 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover-scale border border-orange-100">
+                    <div class="w-28 h-28 bg-orange-100 rounded-full mx-auto mb-6 flex items-center justify-center border-4 border-white shadow-inner">
+                        <i data-lucide="user-round" class="text-tempe w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Syahwa Maufida H.</h3>
+                    <p class="text-tempe font-medium mb-4 italic">Anggota</p>
+                    <div class="bg-gray-100 inline-block px-4 py-1 rounded-full text-xs font-bold text-gray-400 uppercase">NIM: 250421115</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4 & 5. Product Gallery Section -->
+    <section id="product" class="py-24 px-4 max-w-7xl mx-auto">
+        <div class="text-center reveal mb-16">
+            <span class="bg-green-100 text-green-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Available Now</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4">Pilihan Produk Tempe Chips</h2>
+            <p class="text-gray-500 mt-2">Dibuat fresh setiap hari dengan kualitas premium.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-20 reveal">
+            <!-- Product 1 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://id-live-01.slatic.net/p/ce8bed22d4dff17c2cc1db87027eb446.jpg" alt="Tempe Chips Original" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-bold mb-2">Original Savory</h4>
+                    <p class="text-gray-500 text-sm mb-4">Rasa gurih alami kedelai dengan sentuhan rempah bawang putih rahasia.</p>
+                    <p class="text-tempe font-bold text-lg">Rp 10.000,-</p>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                <div class="h-64 overflow-hidden relative">
+                    <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold z-10">Best Seller</div>
+                    <img src="https://www.tokomesin.com/wp-content/uploads/2015/08/keripik-tempe-pedas-tokomesin.jpg" alt="Tempe Chips Spicy" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-bold mb-2">Spicy Lime Leaf</h4>
+                    <p class="text-gray-500 text-sm mb-4">Sensasi pedas yang nendang berpadu dengan aroma daun jeruk yang segar.</p>
+                    <p class="text-tempe font-bold text-lg">Rp 12.000,-</p>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://filebroker-cdn.lazada.co.id/kf/S617872976f624ba8b5700a0415bea8e6F.jpg" alt="Tempe Chips Premium" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-bold mb-2">Premium Large Pack</h4>
+                    <p class="text-gray-500 text-sm mb-4">Porsi besar untuk dinikmati bersama keluarga atau teman-teman di rumah.</p>
+                    <p class="text-tempe font-bold text-lg">Rp 15.000,-</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pre-Order Section -->
+        <div id="order" class="bg-tempe rounded-[3rem] p-8 md:p-16 text-white reveal flex flex-col md:flex-row items-center justify-between gap-12 overflow-hidden relative">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20"></div>
+            <div class="max-w-md relative z-10">
+                <h2 class="text-3xl font-bold mb-4">Siap Pre-Order!</h2>
+                <p class="mb-6 opacity-90 text-lg">Nikmati camilan sehat khas Indonesia. Kami menjamin setiap kepingnya renyah dan penuh rasa.</p>
+                <div class="flex items-center gap-2 mb-6">
+                    <i data-lucide="info" class="w-5 h-5"></i>
+                    <span class="text-sm font-medium">Estimasi harga pasar: Rp10.000 - Rp15.000</span>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-3xl text-gray-800 w-full max-w-sm shadow-2xl relative z-10">
+                <h3 class="font-bold text-xl mb-6 text-center">Pembayaran & Pesanan</h3>
+                <div class="bg-gray-50 p-4 rounded-2xl mb-6 flex items-center justify-between border border-gray-200">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-blue-600 text-white text-[10px] px-2 py-1 rounded font-bold">DANA</div>
+                        <p class="font-bold text-lg tracking-wider">085227009919</p>
+                    </div>
+                    <button class="text-blue-500 text-xs font-bold hover:underline">Copy</button>
+                </div>
+                <a href="https://wa.me/628999999846" target="_blank" class="flex items-center justify-center gap-3 w-full bg-green-500 text-white py-4 rounded-2xl font-bold hover:bg-green-600 transition shadow-lg shadow-green-200">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    Pesan via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. About Tempe (Education) -->
+    <section class="py-24 bg-white reveal">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <!-- Image: Traditional raw tempe -->
+                    <img src="https://i.cdn.newsbytesapp.com/ind/images/l63320250527195122.jpeg" alt="Tempe Tradisional" class="rounded-[2.5rem] shadow-xl h-96 w-full object-cover">
+                    <div class="absolute top-4 left-4 bg-tempe text-white p-4 rounded-2xl shadow-lg">
+                        <i data-lucide="graduation-cap" class="w-8 h-8"></i>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 italic leading-tight">Mengenal Warisan Budaya:<br><span class="text-tempe not-italic text-4xl">Tempe Indonesia</span></h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        <strong>Tempe</strong> bukan sekadar makanan, melainkan identitas kuliner Indonesia. Melalui proses <strong>fermentasi kedelai</strong> alami, tempe diakui dunia sebagai <em>superfood</em> karena kandungan gizinya yang luar biasa.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 text-sm font-semibold text-gray-700">
+                        <div class="flex items-center gap-2 bg-orange-50 p-3 rounded-xl"><i data-lucide="check-circle" class="text-green-500 w-4 h-4"></i> Protein Tinggi</div>
+                        <div class="flex items-center gap-2 bg-orange-50 p-3 rounded-xl"><i data-lucide="check-circle" class="text-green-500 w-4 h-4"></i> Serat Alami</div>
+                        <div class="flex items-center gap-2 bg-orange-50 p-3 rounded-xl"><i data-lucide="check-circle" class="text-green-500 w-4 h-4"></i> Probiotik Baik</div>
+                        <div class="flex items-center gap-2 bg-orange-50 p-3 rounded-xl"><i data-lucide="check-circle" class="text-green-500 w-4 h-4"></i> Rendah Lemak</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Contact Section -->
+    <section id="contact" class="py-24 px-4 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-tempe/10 rounded-full -mb-48 -mr-48 blur-3xl"></div>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 reveal relative z-10">
+            <div>
+                <h2 class="text-4xl font-bold mb-6">Butuh Bantuan?</h2>
+                <p class="text-gray-400 mb-10 text-lg">Punya pertanyaan seputar produk atau ingin melakukan pemesanan partai besar? Hubungi tim kami sekarang juga.</p>
+                
+                <div class="space-y-8">
+                    <div class="flex items-start gap-5">
+                        <div class="bg-gray-800 p-4 rounded-2xl text-tempe shadow-lg">
+                            <i data-lucide="phone" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase font-bold tracking-widest mb-1">WhatsApp Fast Response</p>
+                            <p class="font-bold text-xl">0899-9999-846</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="bg-gray-800 p-4 rounded-2xl text-tempe shadow-lg">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase font-bold tracking-widest mb-1">Email Dukungan</p>
+                            <p class="font-bold text-xl underline decoration-tempe">jrnation1809@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-800/50 backdrop-blur-sm p-8 md:p-10 rounded-[2.5rem] border border-gray-700">
+                <h3 class="text-2xl font-bold mb-6">Kirim Pesan Cepat</h3>
+                <form class="space-y-5">
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-gray-400 ml-1">Nama Lengkap</label>
+                        <input type="text" placeholder="Masukkan nama Anda..." class="w-full bg-gray-900/50 border border-gray-700 rounded-2xl p-4 text-white focus:ring-2 focus:ring-tempe outline-none transition">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-gray-400 ml-1">Pesan atau Pertanyaan</label>
+                        <textarea placeholder="Tuliskan pesan Anda di sini..." rows="4" class="w-full bg-gray-900/50 border border-gray-700 rounded-2xl p-4 text-white focus:ring-2 focus:ring-tempe outline-none transition"></textarea>
+                    </div>
+                    <button type="button" class="w-full bg-tempe py-4 rounded-2xl font-bold hover:bg-orange-600 transition-all transform active:scale-95 shadow-xl shadow-orange-900/20">Kirim Sekarang</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-black text-center text-gray-500 px-4">
+        <div class="flex justify-center gap-6 mb-8 text-gray-600">
+            <a href="#" class="hover:text-tempe"><i data-lucide="instagram"></i></a>
+            <a href="#" class="hover:text-tempe"><i data-lucide="facebook"></i></a>
+            <a href="#" class="hover:text-tempe"><i data-lucide="twitter"></i></a>
+        </div>
+        <p class="mb-2 text-sm">&copy; 2025 <span class="text-white font-bold">TEMPE CHIPS UMKM</span>. Created with ❤️ by <span class="text-tempe font-bold">Group 6</span></p>
+        <p class="text-[10px] tracking-widest uppercase opacity-40">Universitas Putra Bangsa - Tugas Kewirausahaan</p>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+
+        // Scroll Animation Logic
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Initial check for elements already in view
+        window.onload = reveal;
+    </script>
+</body>
+</html>
